@@ -138,6 +138,7 @@ class Fungible_Node:
             
             print("sig names attained: ",self.sig_names)
             self.serial_sigs={}
+            self.old_s_sigs={}
             self.mapper_sigs={}
        
 
@@ -153,7 +154,8 @@ class Fungible_Node:
                 self.get_serial_data()
                 time.sleep(1)
                 
-            print ("Got all serial data")    
+            print ("Got all serial data")
+            self.old_s_sigs=self.serial_sigs.copy()
 
         #except:
          #   print ("well the first part didn't work")
@@ -332,11 +334,18 @@ class Fungible_Node:
         #print ("for board ", self.port_num)
 #        print ("mapper sigs",self.mapper_sigs)
         for sig_num in range(self.number_of_sigs):
-#            print("sig number:",sig_num, " value:", self.serial_sigs[sig_num])
+            #print("sig number:",sig_num, " value:", self.serial_sigs[sig_num])
+            #print("old sig number:",sig_num, " value:", self.old_s_sigs[sig_num])
+    
+            if (self.serial_sigs[sig_num] == self.old_s_sigs[sig_num]):
+                #Only update data if it has a new value...no point sending the old one again
+                #print("signal is the same as before: ", sig_num)
+                continue
+            else:
+                #print ("updating signal: ", sig_num)
+                self.mapper_sigs[sig_num].update(self.serial_sigs[sig_num])
 
-
-
-            self.mapper_sigs[sig_num].update(self.serial_sigs[sig_num])
+        
            # map_num=map_num+1
 
 
@@ -378,7 +387,7 @@ class Fungible_Node:
                 self.state = 0
             
             #print ('data', data, 'state', self.state)
-            
+            self.old_s_sigs=self.serial_sigs.copy()
             for i in range(8):
                 if self.state==1 and L==8:
                     try: 

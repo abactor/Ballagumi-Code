@@ -38,10 +38,10 @@ def main_loop():
                     input_mode = queue_list
                 elif queue_list[1].startswith('SI'):
                     get_board_number = 1
-                else:
-                    ser_stream=(b_array[queue_list[0]].s_read(10))
-                    for ser_line in ser_stream:
-                        print(ser_line)
+               # else:
+                   # ser_stream=(b_array[queue_list[0]].s_read(10))
+                   # for ser_line in ser_stream:
+                   #     print(ser_line)
                     
                 #print("waiting",ser.inWaiting())
                 #ser.flushInput()
@@ -50,6 +50,12 @@ def main_loop():
                # ser.flushInput()
 #                b_array[0].s_write(queue_list+"\r")
                 b_array[queue_list[0]].s_write(queue_list[1]+"\r")
+                
+                print ("in waiting ", b_array[queue_list[0]].ser.inWaiting())
+                ser_stream=(b_array[queue_list[0]].s_read(10))
+                print ("ser stream: ", ser_stream)
+                for ser_line in ser_stream:
+                    print("Returned : ",ser_line)
     #                still_alive=0
                 #break  
                 #buff_read()
@@ -59,7 +65,8 @@ def main_loop():
             return
        
     #except KeyboardInterrupt:
-    except:    
+    except:
+        
         pass
     #end main_loop
 
@@ -141,14 +148,15 @@ try:
 #    elif self.OS == 'posix':
 #        p = Process(target=f, args=(q,open_list,))
 except:
-    print ("Thread couldn't queue")
+    print ("Queue couldn't open")
             
 #try:
     #p.start()
-f(q,open_list)
-#except:
+try:    
+    f(q,open_list)
+except:
     
-    #print("GUI couldn't start")
+    print("GUI couldn't start")
     #raise
 
 
