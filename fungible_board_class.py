@@ -11,7 +11,41 @@ from Queue import Empty
 import time
 
 
-sensorinfo = [(2, '0S1', 'LeftMid', 'A', 'ON'),
+sensorinfo = [(1, '0S1', 'LeftBase', 'A', 'ON'),
+              (1, '1S1', 'LeftBase', 'B', 'ON'),
+              (1, '2S1', 'LeftBase', 'C', 'ON'),
+              (1, '3S1', 'LeftWingBend', '1', 'ON'),
+              (1, '4S1', 'LeftWingBend', '2', 'ON'),
+              (1, '5S1', 'LeftWingBend', '3', 'ON'),
+              (1, '6S1', 'LeftWingBend', '4', 'ON'),
+              (1, '7S1', 'Horizontal', '1', 'ON'),
+              (1, '0D1', 'LeftBase', 'A-B', 'ON'),
+              (1, '1D1', 'LeftBase', 'A-C', 'ON'),
+              (1, '2D1', 'instr1', 'N/A', 'ON'),
+              (1, '3D1', 'instr2', 'N/A', 'ON'),
+              (1, '4D1', 'N-A1', 'N/A', 'ON'),
+              (1, '5D1', 'N-A2', 'N/A', 'ON'),
+              (1, '6D1', 'N-A3', 'N/A', 'ON'),
+              (1, '7D1', 'N-A4', 'N/A', 'ON'),
+
+              (1, '0S0', 'LeftBase', 'A', 'OFF'),
+              (1, '1S0', 'LeftBase', 'B', 'OFF'),
+              (1, '2S0', 'LeftBase', 'C', 'OFF'),
+              (1, '3S0', 'LeftWingBend', '1', 'OFF'),
+              (1, '4S0', 'LeftWingBend', '2', 'OFF'),
+              (1, '5S0', 'LeftWingBend', '3', 'OFF'),
+              (1, '6S0', 'LeftWingBend', '4', 'OFF'),
+              (1, '7S0', 'Horizontal', '1', 'OFF'),
+              (1, '0D0', 'LeftBase', 'A-B', 'OFF'),
+              (1, '1D0', 'LeftBase', 'A-C', 'OFF'),
+              (1, '2D0', 'instr1', 'N/A', 'OFF'),
+              (1, '3D0', 'instr2', 'N/A', 'OFF'),
+              (1, '4D0', 'N-A1', 'N/A', 'OFF'),
+              (1, '5D0', 'N-A2', 'N/A', 'OFF'),
+              (1, '6D0', 'N-A3', 'N/A', 'OFF'),
+              (1, '7D0', 'N-A4', 'N/A', 'OFF'),
+
+              (2, '0S1', 'LeftMid', 'A', 'ON'),
               (2, '1S1', 'LeftMid', 'B', 'ON'),
               (2, '2S1', 'LeftMid', 'C', 'ON'),
               (2, '3S1', 'LeftTip', 'A', 'ON'),
@@ -21,8 +55,8 @@ sensorinfo = [(2, '0S1', 'LeftMid', 'A', 'ON'),
               (2, '7S1', 'Horizontal', '4', 'ON'),
               (2, '0D1', 'LeftMid', 'A-B', 'ON'),
               (2, '1D1', 'LeftMid', 'A-C', 'ON'),
-              (2, '2D1', 'extra1', 'N/A', 'ON'),
-              (2, '3D1', 'extra2', 'N/A', 'ON'),
+              (2, '2D1', 'instr1', 'N/A', 'ON'),
+              (2, '3D1', 'instr2', 'N/A', 'ON'),
               (2, '4D1', 'LeftTip-HorizontalBend', 'N/A', 'ON'),
               (2, '5D1', 'LeftTip', 'B-A', 'ON'),
               (2, '6D1', 'LeftTip-LeftMid', 'N/A', 'ON'),
@@ -38,8 +72,8 @@ sensorinfo = [(2, '0S1', 'LeftMid', 'A', 'ON'),
               (2, '7S0', 'Horizontal', '4', 'OFF'),
               (2, '0D0', 'LeftMid', 'A-B', 'OFF'),
               (2, '1D0', 'LeftMid', 'A-C', 'OFF'),
-              (2, '2D0', 'extra1', 'N/A', 'OFF'),
-              (2, '3D0', 'extra2', 'N/A', 'OFF'),
+              (2, '2D0', 'instr1', 'N/A', 'OFF'),
+              (2, '3D0', 'instr2', 'N/A', 'OFF'),
               (2, '4D0', 'LeftTip-HorizontalBend', 'N/A', 'OFF'),
               (2, '5D0', 'LeftTip', 'B-A', 'OFF'),
               (2, '6D0', 'LeftTip-LeftMid', 'N/A', 'OFF'),
@@ -59,8 +93,8 @@ sensorinfo = [(2, '0S1', 'LeftMid', 'A', 'ON'),
               (3, '3D1', 'RightWingBend', '1-2', 'ON'),
               (3, '4D1', 'RightBase-RightWingBend', 'N/A', 'ON'),
               (3, '5D1', 'RightWingBend-VerticalBend', 'N/A', 'ON'),
-              (3, '6D1', 'InstantAmp', '2', 'ON'),
-              (3, '7D1', 'InstantAmp', '4', 'ON'),
+              (3, '6D1', 'instr1', 'N/A', 'ON'),
+              (3, '7D1', 'instr2', 'N/A', 'ON'),
 
               (3, '0S0', 'RightBase', 'A', 'OFF'),
               (3, '1S0', 'RightBase', 'B', 'OFF'),
@@ -76,8 +110,8 @@ sensorinfo = [(2, '0S1', 'LeftMid', 'A', 'ON'),
               (3, '3D0', 'RightWingBend', '1-2', 'OFF'),
               (3, '4D0', 'RightBase-RightWingBend', 'N/A', 'OFF'),
               (3, '5D0', 'RightWingBend-VerticalBend', 'N/A', 'OFF'),
-              (3, '6D0', 'InstantAmp', '2', 'OFF'),
-              (3, '7D0', 'InstantAmp', '4', 'OFF')]
+              (3, '6D0', 'instr1', 'N/A', 'OFF'),
+              (3, '7D0', 'instr2', 'N/A', 'OFF')]
 
 
 class Fungible_Node:
@@ -343,6 +377,7 @@ class Fungible_Node:
                 continue
             else:
                 #print ("updating signal: ", sig_num)
+
                 self.mapper_sigs[sig_num].update(self.serial_sigs[sig_num])
 
         

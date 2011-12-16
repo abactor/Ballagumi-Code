@@ -12,15 +12,17 @@ def main_loop():
 #        while (still_alive==1):
 
            # f(q,open_list)
-    try:
-        for b_num in open_list:
+    
+    for b_num in open_list:
 
+        try:
             b_array[b_num].get_serial_data()
             b_array[b_num].update_mapper_signals()
             b_array[b_num].poll(m_inst)
-    except:
-        print("can't read write signals")
-        raise
+        except:
+            print("trying to get/update board",b_num)
+            print("can't read write signals")
+            #raise
     try:
         
         queue_list=q.get_nowait()    # prints "[42, None, 'hello']"
@@ -112,7 +114,7 @@ def f(q,on_list):
 OS = os.name
 #Open Serial Port to Read Data
 if OS == 'nt':
-    port_list = [14-1,5-1]
+    port_list = [14-1,5-1,6-1]
 elif OS == 'posix':
     import sys
     sys.path.append("/Users/mahtab-ghamsari/Projects/Mappings/pyserial-2.5/")
@@ -128,13 +130,14 @@ print Fungible_Node
 m_inst= mapper.device("Fungible1", 9000)
 b_array={}
 b_num=0
-b_list=[0,1]
+b_list=[0,1,2]
 open_list=[]
 for b_num in b_list:
     try:
         b_array[b_num]=Fungible_Node(port_list[b_num],115200,0.3,m_inst)
         open_list.append(b_num)
     except:
+        print ("error on b_num",b_num, port_list[b_num])
         raise
 
 
