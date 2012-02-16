@@ -18,13 +18,14 @@ def main_loop():
         try:
             b_array[b_num].get_serial_data()
             b_array[b_num].update_mapper_signals()
-            b_array[b_num].poll(m_inst)
+            #b_array[b_num].poll(m_inst)
         except:
             print("trying to get/update board",b_num)
             print("can't read write signals")
             #raise
+            
     try:
-        
+        m_inst.poll(0)
         queue_list=q.get_nowait()    # prints "[42, None, 'hello']"
         print ("queue list: ", queue_list)
         if queue_list=="quit":
@@ -130,6 +131,7 @@ print Fungible_Node
 m_inst= mapper.device("Fungible1", 9000)
 b_array={}
 b_num=0
+#b_list=[0,1,2]
 b_list=[0,1,2]
 open_list=[]
 for b_num in b_list:

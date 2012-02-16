@@ -21,12 +21,12 @@ sensorinfo = [(1, '0S1', 'LeftBase', 'A', 'ON'),
               (1, '7S1', 'Horizontal', '1', 'ON'),
               (1, '0D1', 'LeftBase', 'A-B', 'ON'),
               (1, '1D1', 'LeftBase', 'A-C', 'ON'),
-              (1, '2D1', 'instr1', 'N/A', 'ON'),
-              (1, '3D1', 'instr2', 'N/A', 'ON'),
-              (1, '4D1', 'N-A1', 'N/A', 'ON'),
-              (1, '5D1', 'N-A2', 'N/A', 'ON'),
-              (1, '6D1', 'N-A3', 'N/A', 'ON'),
-              (1, '7D1', 'N-A4', 'N/A', 'ON'),
+              (1, '2D1', 'instr1', 'NA', 'ON'),
+              (1, '3D1', 'instr2', 'NA', 'ON'),
+              (1, '4D1', 'N-A1', 'NA', 'ON'),
+              (1, '5D1', 'N-A2', 'NA', 'ON'),
+              (1, '6D1', 'N-A3', 'NA', 'ON'),
+              (1, '7D1', 'N-A4', 'NA', 'ON'),
 
               (1, '0S0', 'LeftBase', 'A', 'OFF'),
               (1, '1S0', 'LeftBase', 'B', 'OFF'),
@@ -38,12 +38,12 @@ sensorinfo = [(1, '0S1', 'LeftBase', 'A', 'ON'),
               (1, '7S0', 'Horizontal', '1', 'OFF'),
               (1, '0D0', 'LeftBase', 'A-B', 'OFF'),
               (1, '1D0', 'LeftBase', 'A-C', 'OFF'),
-              (1, '2D0', 'instr1', 'N/A', 'OFF'),
-              (1, '3D0', 'instr2', 'N/A', 'OFF'),
-              (1, '4D0', 'N-A1', 'N/A', 'OFF'),
-              (1, '5D0', 'N-A2', 'N/A', 'OFF'),
-              (1, '6D0', 'N-A3', 'N/A', 'OFF'),
-              (1, '7D0', 'N-A4', 'N/A', 'OFF'),
+              (1, '2D0', 'instr1', 'NA', 'OFF'),
+              (1, '3D0', 'instr2', 'NA', 'OFF'),
+              (1, '4D0', 'N-A1', 'NA', 'OFF'),
+              (1, '5D0', 'N-A2', 'NA', 'OFF'),
+              (1, '6D0', 'N-A3', 'NA', 'OFF'),
+              (1, '7D0', 'N-A4', 'NA', 'OFF'),
 
               (2, '0S1', 'LeftMid', 'A', 'ON'),
               (2, '1S1', 'LeftMid', 'B', 'ON'),
@@ -55,12 +55,12 @@ sensorinfo = [(1, '0S1', 'LeftBase', 'A', 'ON'),
               (2, '7S1', 'Horizontal', '4', 'ON'),
               (2, '0D1', 'LeftMid', 'A-B', 'ON'),
               (2, '1D1', 'LeftMid', 'A-C', 'ON'),
-              (2, '2D1', 'instr1', 'N/A', 'ON'),
-              (2, '3D1', 'instr2', 'N/A', 'ON'),
-              (2, '4D1', 'LeftTip-HorizontalBend', 'N/A', 'ON'),
+              (2, '2D1', 'instr1', 'NA', 'ON'),
+              (2, '3D1', 'instr2', 'NA', 'ON'),
+              (2, '4D1', 'LeftTip-HorizontalBend', 'NA', 'ON'),
               (2, '5D1', 'LeftTip', 'B-A', 'ON'),
-              (2, '6D1', 'LeftTip-LeftMid', 'N/A', 'ON'),
-              (2, '7D1', 'Horizontal Bend', '3-4', 'ON'),
+              (2, '6D1', 'LeftTip-LeftMid', 'NA', 'ON'),
+              (2, '7D1', 'Horizontal_Bend', '3-4', 'ON'),
 
               (2, '0S0', 'LeftMid', 'A', 'OFF'),
               (2, '1S0', 'LeftMid', 'B', 'OFF'),
@@ -72,12 +72,12 @@ sensorinfo = [(1, '0S1', 'LeftBase', 'A', 'ON'),
               (2, '7S0', 'Horizontal', '4', 'OFF'),
               (2, '0D0', 'LeftMid', 'A-B', 'OFF'),
               (2, '1D0', 'LeftMid', 'A-C', 'OFF'),
-              (2, '2D0', 'instr1', 'N/A', 'OFF'),
-              (2, '3D0', 'instr2', 'N/A', 'OFF'),
-              (2, '4D0', 'LeftTip-HorizontalBend', 'N/A', 'OFF'),
+              (2, '2D0', 'instr1', 'NA', 'OFF'),
+              (2, '3D0', 'instr2', 'NA', 'OFF'),
+              (2, '4D0', 'LeftTip-HorizontalBend', 'NA', 'OFF'),
               (2, '5D0', 'LeftTip', 'B-A', 'OFF'),
-              (2, '6D0', 'LeftTip-LeftMid', 'N/A', 'OFF'),
-              (2, '7D0', 'Horizontal Bend', '3-4', 'OFF'),
+              (2, '6D0', 'LeftTip-LeftMid', 'NA', 'OFF'),
+              (2, '7D0', 'Horizontal_Bend', '3-4', 'OFF'),
 
               (3, '0S1', 'RightBase', 'A', 'ON'),
               (3, '1S1', 'RightBase', 'B', 'ON'),
@@ -91,10 +91,10 @@ sensorinfo = [(1, '0S1', 'LeftBase', 'A', 'ON'),
               (3, '1D1', 'RightBase', 'A-C', 'ON'),
               (3, '2D1', 'RightWingBend', '2-3', 'ON'),
               (3, '3D1', 'RightWingBend', '1-2', 'ON'),
-              (3, '4D1', 'RightBase-RightWingBend', 'N/A', 'ON'),
-              (3, '5D1', 'RightWingBend-VerticalBend', 'N/A', 'ON'),
-              (3, '6D1', 'instr1', 'N/A', 'ON'),
-              (3, '7D1', 'instr2', 'N/A', 'ON'),
+              (3, '4D1', 'RightBase-RightWingBend', 'NA', 'ON'),
+              (3, '5D1', 'RightWingBend-VerticalBend', 'NA', 'ON'),
+              (3, '6D1', 'instr1', 'NA', 'ON'),
+              (3, '7D1', 'instr2', 'NA', 'ON'),
 
               (3, '0S0', 'RightBase', 'A', 'OFF'),
               (3, '1S0', 'RightBase', 'B', 'OFF'),
@@ -108,10 +108,65 @@ sensorinfo = [(1, '0S1', 'LeftBase', 'A', 'ON'),
               (3, '1D0', 'RightBase', 'A-C', 'OFF'),
               (3, '2D0', 'RightWingBend', '2-3', 'OFF'),
               (3, '3D0', 'RightWingBend', '1-2', 'OFF'),
-              (3, '4D0', 'RightBase-RightWingBend', 'N/A', 'OFF'),
-              (3, '5D0', 'RightWingBend-VerticalBend', 'N/A', 'OFF'),
-              (3, '6D0', 'instr1', 'N/A', 'OFF'),
-              (3, '7D0', 'instr2', 'N/A', 'OFF')]
+              (3, '4D0', 'RightBase-RightWingBend', 'NA', 'OFF'),
+              (3, '5D0', 'RightWingBend-VerticalBend', 'NA', 'OFF'),
+              (3, '6D0', 'instr1', 'NA', 'OFF'),
+              (3, '7D0', 'instr2', 'NA', 'OFF'),
+
+              (1, '0S2', 'LeftBase', 'A', 'COMP'),
+              (1, '1S2', 'LeftBase', 'B', 'COMP'),
+              (1, '2S2', 'LeftBase', 'C', 'COMP'),
+              (1, '3S2', 'LeftWingBend', '1', 'COMP'),
+              (1, '4S2', 'LeftWingBend', '2', 'COMP'),
+              (1, '5S2', 'LeftWingBend', '3', 'COMP'),
+              (1, '6S2', 'LeftWingBend', '4', 'COMP'),
+              (1, '7S2', 'Horizontal', '1', 'COMP'),
+              (1, '0D2', 'LeftBase', 'A-B', 'COMP'),
+              (1, '1D2', 'LeftBase', 'A-C', 'COMP'),
+              (1, '2D2', 'instr1', 'NA', 'COMP'),
+              (1, '3D2', 'instr2', 'NA', 'COMP'),
+              (1, '4D2', 'N-A1', 'NA', 'COMP'),
+              (1, '5D2', 'N-A2', 'NA', 'COMP'),
+              (1, '6D2', 'N-A3', 'NA', 'COMP'),
+              (1, '7D2', 'N-A4', 'NA', 'COMP'),
+
+             
+
+              (2, '0S2', 'LeftMid', 'A', 'COMP'),
+              (2, '1S2', 'LeftMid', 'B', 'COMP'),
+              (2, '2S2', 'LeftMid', 'C', 'COMP'),
+              (2, '3S2', 'LeftTip', 'A', 'COMP'),
+              (2, '4S2', 'LeftTip', 'B', 'COMP'),
+              (2, '5S2', 'Horizontal', '2', 'COMP'),
+              (2, '6S2', 'Horizontal', '3', 'COMP'),
+              (2, '7S2', 'Horizontal', '4', 'COMP'),
+              (2, '0D2', 'LeftMid', 'A-B', 'COMP'),
+              (2, '1D2', 'LeftMid', 'A-C', 'COMP'),
+              (2, '2D2', 'instr1', 'NA', 'COMP'),
+              (2, '3D2', 'instr2', 'NA', 'COMP'),
+              (2, '4D2', 'LeftTip-HorizontalBend', 'NA', 'COMP'),
+              (2, '5D2', 'LeftTip', 'B-A', 'COMP'),
+              (2, '6D2', 'LeftTip-LeftMid', 'NA', 'COMP'),
+              (2, '7D2', 'Horizontal_Bend', '3-4', 'COMP'),
+
+             
+
+              (3, '0S2', 'RightBase', 'A', 'COMP'),
+              (3, '1S2', 'RightBase', 'B', 'COMP'),
+              (3, '2S2', 'RightBase', 'C', 'COMP'),
+              (3, '3S2', 'RightWingBend', '1', 'COMP'),
+              (3, '4S2', 'RightWingBend', '2', 'COMP'),
+              (3, '5S2', 'RightWingBend', '3', 'COMP'),
+              (3, '6S2', 'RightWingBend', '4', 'COMP'),
+              (3, '7S2', 'VerticalBend', '2', 'COMP'),
+              (3, '0D2', 'RightBase', 'A-B', 'COMP'),
+              (3, '1D2', 'RightBase', 'A-C', 'COMP'),
+              (3, '2D2', 'RightWingBend', '2-3', 'COMP'),
+              (3, '3D2', 'RightWingBend', '1-2', 'COMP'),
+              (3, '4D2', 'RightBase-RightWingBend', 'NA', 'COMP'),
+              (3, '5D2', 'RightWingBend-VerticalBend', 'NA', 'COMP'),
+              (3, '6D2', 'instr1', 'NA', 'COMP'),
+              (3, '7D2', 'instr2', 'NA', 'COMP')]
 
 
 class Fungible_Node:
@@ -195,7 +250,7 @@ class Fungible_Node:
          #   print ("well the first part didn't work")
         #try:
             self.update_mapper_signals()
-#           self.poll(self,m_inst)   
+            self.poll(m_inst)   
         except:
             print ("Funginble Node initialization failed!")
             raise
@@ -303,8 +358,11 @@ class Fungible_Node:
            
             self.s_write("Sc 5\r")
             time.sleep(1)
+            self.s_write("SSR\r")
+
+            time.sleep(1)
             self.ser.flushInput()
-            self.s_write("SbC\r")
+            self.s_write("Sbc\r")
             
             
             time.sleep(1)
@@ -370,16 +428,20 @@ class Fungible_Node:
         for sig_num in range(self.number_of_sigs):
             #print("sig number:",sig_num, " value:", self.serial_sigs[sig_num])
             #print("old sig number:",sig_num, " value:", self.old_s_sigs[sig_num])
-    
+            #print ("what sigs: ",sig_num)
             if (self.serial_sigs[sig_num] == self.old_s_sigs[sig_num]):
                 #Only update data if it has a new value...no point sending the old one again
                 #print("signal is the same as before: ", sig_num)
+#                print ("not new updating signal: ", sig_num, "val: ", self.serial_sigs[sig_num])
                 continue
             else:
-                #print ("updating signal: ", sig_num)
+                #print ("what sigs: ",self.number_of_sigs)
+#                print ("updating signal: ", sig_num, "val: ", self.serial_sigs[sig_num])
+                
 
                 self.mapper_sigs[sig_num].update(self.serial_sigs[sig_num])
-
+                #print("sig number:",sig_num, " value:", self.serial_sigs[sig_num])
+                #print("old sig number:",sig_num, " value:", self.old_s_sigs[sig_num])
         
            # map_num=map_num+1
 
@@ -411,6 +473,7 @@ class Fungible_Node:
         #lines=self.ser.readlines(6)
         #print ("length of serial buff: ", len(lines))
         #print ("lines at 358: ", lines)
+        self.old_s_sigs=self.serial_sigs.copy()
         for s in lines:
             data = s.split()
             #print "Data Coming In", data                
@@ -422,11 +485,13 @@ class Fungible_Node:
                 self.state = 0
             
             #print ('data', data, 'state', self.state)
-            self.old_s_sigs=self.serial_sigs.copy()
+
             for i in range(8):
                 if self.state==1 and L==8:
-                    try: 
+                    try:
+                        #print ("getting signalin state 1")
                         self.serial_sigs[i]=int(data[i])
+                        #print ("sigs 2", self.serial_sigs[i])
                     except:
                         print ("Signal is beyond range (not evenly divisible by 8)")
                     #mapper_signals[active_board][i].update(int(data[i]))
@@ -435,7 +500,9 @@ class Fungible_Node:
                     
                 if self.state==2 and L==8:
                     try: 
+                        #print ("getting signalin state 2")
                         self.serial_sigs[i+8]=int(data[i])
+                       # print ("sigs 2", self.serial_sigs[i+8])
                     except:
                         print ("Signal is beyond range (not evenly divisible by 8)")
                    # mapper_signals[active_board][i+8].update(int(data[i]))
